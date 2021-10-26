@@ -29,14 +29,12 @@ class TitleFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.placeholder_layout, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+        val binding = DataBindingUtil.inflate<FragmentTitleBinding>(inflater,
+            R.layout.fragment_title,container,false)
+        return binding.root
     }
-
     companion object {
         /**
          * Use this factory method to create a new instance of
